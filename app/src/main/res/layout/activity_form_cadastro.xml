@@ -8,17 +8,17 @@
     tools:context=".FormCadastro">
 
 
-    <ImageView
-        android:id="@+id/logo"
-        android:src="@drawable/logoGeticket"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="200dp"
-        android:layout_height="200dp"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/logo"-->
+<!--        android:src="@drawable/logoGeticket"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="200dp"/>-->
     <TextView
         android:id="@+id/txt_login"
-        android:text="Sign In"
+        android:text="ID ADDRESS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -27,70 +27,90 @@
         android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintTop_toBottomOf="paret"
         />
 
     <View
         android:id="@+id/containerComponents"
         style="@style/ContainerComponents"
-        android:layout_width="363dp"
-        android:layout_height="351dp"
+        android:layout_width="384dp"
+        android:layout_height="510dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_login" />
+
     <EditText
-        android:id="@+id/Edit_Name"
+        android:id="@+id/cep"
         style="@style/Edit_Text"
-        android:hint="Name"
+        android:hint="Cep"
         android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="@id/containerComponents"
         app:layout_constraintEnd_toEndOf="@id/containerComponents"
         app:layout_constraintTop_toTopOf="@id/containerComponents"
         />
-    <EditText
-        android:id="@+id/Edit_Email"
-        style="@style/Edit_Text"
-        android:hint="Email"
-        android:drawableRight="@drawable/baseline_email_24"
-        android:textColorHint="@color/white"
-        app:layout_constraintStart_toStartOf="@id/containerComponents"
-        app:layout_constraintEnd_toEndOf="@id/containerComponents"
-        app:layout_constraintTop_toBottomOf="@id/Edit_Name"
-        />
 
     <EditText
-        android:id="@+id/Edit_Senha"
+        android:id="@+id/estado"
         style="@style/Edit_Text"
-        android:hint="Password"
-        android:drawableRight="@drawable/baseline_eye"
+        android:layout_marginTop="80dp"
+        android:hint="Estado"
         android:textColorHint="@color/white"
-        app:layout_constraintStart_toStartOf="@id/containerComponents"
         app:layout_constraintEnd_toEndOf="@id/containerComponents"
-        app:layout_constraintTop_toBottomOf="@id/Edit_Email" />
-    />
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/cep" />
+
+    <EditText
+        android:id="@+id/cidade"
+        style="@style/Edit_Text"
+        android:layout_marginTop="80dp"
+        android:hint="Cidade"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/estado" />
+
+
+    <EditText
+        android:id="@+id/bairro"
+        style="@style/Edit_Text"
+        android:layout_marginTop="80dp"
+        android:hint="Bairro"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/cidade" />
+
+    <EditText
+        android:id="@+id/rua"
+        style="@style/Edit_Text"
+        android:layout_marginTop="80dp"
+        android:hint="Rua"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/bairro" />
+
+    <EditText
+        android:id="@+id/numero"
+        style="@style/Edit_Text"
+        android:layout_marginTop="80dp"
+        android:hint="Numero"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/rua" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/button_salvar"
         style="@style/Button"
-        android:text="Sign In"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="20sp"
+        android:layout_marginTop="360dp"
+        android:text="Salvar"
         android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="@id/containerComponents"
-        app:layout_constraintEnd_toEndOf="@id/containerComponents"
-        app:layout_constraintTop_toBottomOf="@id/Edit_Senha"
-        />
-
-    <TextView
-        android:id="@+id/txt_cadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Already have an account? Sign In"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/containerComponents" />
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@id/estado" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
